@@ -1,0 +1,155 @@
+/* Estilo geral da página */
+body {
+    background-color: #000; /* Preto */
+    color: #fff; /* Texto branco para contraste */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #222; /* Preto com leve tom mais claro */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #222; /* Preto com leve tom mais claro */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos do menu hamburguer */
+.menu-container {
+    position: relative;
+}
+
+.menu-btn {
+    background-color: #222; /* Preto com leve tom mais claro */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #222; /* Preto com leve tom mais claro */
+    border: 1px solid #444; /* Cinza escuro para a borda */
+    padding: 10px;
+    width: 200px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu ul li:hover {
+    background-color: #333; /* Preto com leve tom mais claro para destaque */
+}
+
+.menu ul li ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    background-color: #222; /* Preto com leve tom mais claro */
+    border: 1px solid #444; /* Cinza escuro para a borda */
+    padding: 10px;
+    margin: 0;
+}
+
+.menu ul li:hover > ul {
+    display: block;
+}
+
+/* Estilos para a lista de livros */
+.book-list {
+    padding: 20px;
+    display: flex; /* Alinha os itens em linha */
+    flex-wrap: wrap; /* Permite que os itens envolvam a linha quando necessário */
+    gap: 20px; /* Espaçamento entre os livros */
+}
+
+/* Estilos para cada livro */
+.book {
+    flex: 1 1 calc(25% - 20px); /* Ajusta a largura dos livros (4 livros por linha com espaçamento) */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    border-bottom: 1px solid #444; /* Cinza escuro para a borda */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #333; /* Fundo dos itens para contraste */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.book img {
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+.book h3 {
+    margin: 0;
+    color: #fff; /* Texto branco para contraste */
+}
+
+.book p {
+    margin: 5px 0;
+    color: #fff; /* Texto branco para contraste */
+}
+
+.book p strong {
+    color: #fff; /* Texto branco para contraste */
+}
+
+/* Responsividade para o menu hamburguer */
+@media (max-width: 768px) {
+    .menu-container {
+        position: static;
+    }
+
+    .menu {
+        position: static;
+        display: block;
+    }
+}
+
+/* Estilos para o botão Voltar para o Topo */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    display: none; /* Inicialmente escondido */
+}
+
+.back-to-top:hover {
+    background-color: #555;
+}
+
+/* Mostrar o botão quando a rolagem for detectada */
+body.scrolled .back-to-top {
+    display: block;
+}
